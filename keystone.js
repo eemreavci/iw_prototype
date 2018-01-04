@@ -36,6 +36,9 @@ keystone.init({
 	'user model': 'User',
 });
 
+// Configure CloudinaryImage
+keystone.set('cloudinary config', { cloud_name: 'dfjtnd0ht', api_key: '257733387422471', api_secret: 'L7TKVPTYOZ6CQnoljxgRORlffuk' });
+
 // Load your project's Models
 keystone.import('models');
 
@@ -58,9 +61,6 @@ keystone.set('nav', {
 	enquiries: 'enquiries',
 	users: 'users',
 });
-
-// Configure CloudinaryImage
-// keystone.set('cloudinary config', { cloud_name: 'dfjtnd0ht', api_key: '257733387422471', api_secret: 'L7TKVPTYOZ6CQnoljxgRORlffuk' });
 
 // optional, will force cloudinary to serve images over https
 // keystone.set('cloudinary secure', true);
