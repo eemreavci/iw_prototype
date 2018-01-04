@@ -1,0 +1,140 @@
+{{!< default}}
+<div class="main-content">
+  <div class="slider-container">
+    {{# each sliderItems}}
+    <div class="hero-container" style="background-image: url('{{{cloudinaryUrl backgroundImage height=736 quality="auto" crop="fit"}}}')">
+      <div class="hero-content">
+        <h1>
+          {{title}}
+        </h1>
+        <div class="hero-subtext">
+          {{subtext}}
+        </div>
+        <div class="cta">{{buttonText}}</div>
+      </div>
+      <div class="hero-product-image slideInUp" style="background-image: url('{{{cloudinaryUrl productImage height=736 quality="auto" crop="fit"}}}')">
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  <div class="features-container">
+    {{# each features}}
+      {{#ifOdd orderInPage }}
+      <div class="feature-section light">
+        <div class="feature-image-container">
+          {{#if image}}
+          <div class="feature-image" style="background-image: url('{{{cloudinaryUrl image height=510 quality="auto" crop="fit"}}}')">
+          </div>
+          {{/if}}
+          <div class="feature-image-subtext">
+            {{{subtext}}}
+          </div>
+        </div>
+        <div class="feature-text-container">
+          <div class="feature-text-inner-container">
+            <h2>
+              {{{title}}}
+            </h2>
+            <div class="feature-detail-text">
+              {{{description}}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/ifOdd}}
+      {{#ifEven orderInPage }}
+      <div class="feature-section dark">
+        <div class="feature-text-container">
+          <div class="feature-text-inner-container">
+            <h2>
+              {{{title}}}
+            </h2>
+            <div class="feature-detail-text">
+              {{{description}}}
+            </div>
+          </div>
+        </div>
+        <div class="feature-image-container">
+          {{#if image}}
+          <div class="feature-image" style="background-image: url('{{{cloudinaryUrl image height=510 quality="auto" crop="fit"}}}')">
+          </div>
+          {{/if}}
+          <div class="feature-image-subtext">
+            {{{subtext}}}
+          </div>
+        </div>
+      </div>
+      {{/ifEven}}
+    {{/each}}
+  </div>
+  <div class="about-product-container">
+    <h2>About Product</h2>
+    <div class="about-product-detail">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+    </div>
+    <div class="about-product-icons-container">
+      <div class="about-product-icon-container">
+        <div class="about-product-icon" style="background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,w_100/v1514500806/icon-recharge_ghxwdu.png')">
+        </div>
+        <h2 class="about-product-icon-header">
+          Simply Rechargeable
+        </h2>
+        <div class="about-product-icon-description">
+          Up to 4 weeks of battery life
+        </div>
+      </div>
+      <div class="about-product-icon-container">
+        <div class="about-product-icon" style="background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,w_100/v1514500806/icon-recharge_ghxwdu.png')">
+        </div>
+        <h2 class="about-product-icon-header">
+          Simply Rechargeable
+        </h2>
+        <div class="about-product-icon-description">
+          Up to 4 weeks of battery life
+        </div>
+      </div>
+      <div class="about-product-icon-container">
+        <div class="about-product-icon" style="background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,h_100/v1514500806/icon-premium-support_wuubz7.png')">
+        </div>
+        <h2 class="about-product-icon-header">
+          Premium Support
+        </h2>
+        <div class="about-product-icon-description">
+          Up to 4 weeks of battery life
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tech-spec-container">
+    <h2>Tech Specifications</h2>
+    <div class="tech-spec-image" style="background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,h_900,q_100/v1514535087/tech-spec_zqg3cs.png')">
+    </div>
+    <div class="tech-spec-large-text">
+      50mm / 900grams
+    </div>
+    <div class="tech-spec-small-text-container">
+      <div class="tech-spec-small-text">
+        Thickness: 50mm
+      </div>
+      <div class="tech-spec-small-text">
+        Dimensions: 270mm x 105mm
+      </div>
+    </div>
+  </div>
+  <div class="contact-us-container">
+    <div class="contact-us-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+    </div>
+    <div class="cta">
+      BIZE ULASIN
+    </div>
+  </div>
+  <div class="references-container">
+    <h2>Referanslar</h2>
+    <div class="references-map">
+    </div>
+    <div class="cta">
+      REFERANS DETAYLARI
+    </div>
+  </div>
+</div>

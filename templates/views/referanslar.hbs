@@ -1,0 +1,33 @@
+{{!< default}}
+<div class="main-content">
+  <div class="hero-container about-page" style="background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,h_736/v1514684417/references-background_dgzlhx.png')">
+    <div class="hero-content">
+      <h1>
+        REFERANSLAR
+      </h1>
+      <div class="hero-subtext">
+
+      </div>
+    </div>
+  </div>
+  <div class="references-categories-container">
+    {{# each references}}
+      <div class="reference-category-container">
+        <h2>{{@key}}</h2>
+        {{# each this}}
+          <div class="reference-container">
+            <div class="reference-cell name">
+              {{name}}
+            </div>
+            <div class="reference-cell website">
+              {{website}}
+            </div>
+            <div class="reference-cell phone">
+              {{phone}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
+</div>

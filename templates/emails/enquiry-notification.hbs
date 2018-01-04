@@ -1,0 +1,35 @@
+<h1>Merhaba %recipient.firstName%</h1>
+<p class="text-larger">Yeni bir musteri mesaji alindi</p>
+{{#if enquiry.email}}
+	<p class="text-larger">Musteri Bigileri</p>
+	<p class="text-larger">
+	Isim:
+	{{#if enquiry.name.first}}
+		<strong>{{enquiry.name.first}}</strong>
+	{{/if}}
+	</p>
+	<p class="text-larger">
+	Soyisim:
+	{{#if enquiry.name.last}}
+		<strong>{{enquiry.name.last}}</strong>
+	{{/if}}
+	</p>
+	<p class="text-larger">
+	Email:
+	{{#if enquiry.email}}
+		<strong><a href="mailto:{{enquiry.email}}">{{enquiry.email}}</a></strong>
+	{{/if}}
+	</p>
+	<p class="text-larger">
+	Telefon:
+	{{#if enquiry.phone}}
+		<strong>{{enquiry.phone}}</strong>
+	{{/if}}
+	</p>
+
+	{{#if enquiry.message}}
+		{{{enquiry.message.html}}}
+	{{/if}}
+
+	<p class="text-muted">Mesaj tarihi: {{underscoreFormat enquiry 'createdAt'}}</p>
+{{/if}}

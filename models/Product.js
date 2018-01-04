@@ -1,0 +1,58 @@
+var keystone = require('keystone');
+var Types = keystone.Field.Types;
+
+var Product = new keystone.List('Product', {
+	map: { name: 'name' },
+	singular: 'Product',
+	plural: 'Products',
+	autokey: { path: 'slug', from: 'name', unique: true },
+	defaultSort: '-orderInPage',
+});
+
+Product.add({
+	name: { type: String, required: true },
+	image: { type: Types.CloudinaryImage },
+	orderInPage: { type: Number },
+	highlightPropertyHeader1: { type: String },
+	highlightPropertyText1: { type: String },
+	highlightPropertyHeader2: { type: String },
+	highlightPropertyText2: { type: String },
+	highlightPropertyHeader3: { type: String },
+	highlightPropertyText3: { type: String },
+	highlightPropertyHeader4: { type: String },
+	highlightPropertyText4: { type: String },
+	highlightPropertyHeader5: { type: String },
+	highlightPropertyText5: { type: String },
+	propertiesHeader1: { type: String },
+	properties1: { type: Types.TextArray },
+	propertiesHeader2: { type: String },
+	properties2: { type: Types.TextArray },
+	propertiesHeader3: { type: String },
+	properties3: { type: Types.TextArray },
+	propertiesHeader4: { type: String },
+	properties4: { type: Types.TextArray },
+	propertiesHeader5: { type: String },
+	properties5: { type: Types.TextArray },
+	propertiesHeader6: { type: String },
+	properties6: { type: Types.TextArray },
+	propertiesHeader7: { type: String },
+	properties7: { type: Types.TextArray },
+	propertiesHeader8: { type: String },
+	properties8: { type: Types.TextArray },
+	propertiesHeader9: { type: String },
+	properties9: { type: Types.TextArray },
+	propertiesHeader10: { type: String },
+	properties10: { type: Types.TextArray },
+	propertiesHeader11: { type: String },
+	properties11: { type: Types.TextArray },
+	propertiesHeader12: { type: String },
+	properties12: { type: Types.TextArray },
+	propertiesHeader13: { type: String },
+	properties13: { type: Types.TextArray },
+	propertiesHeader14: { type: String },
+	properties14: { type: Types.TextArray },
+	propertiesHeader15: { type: String },
+	properties15: { type: Types.TextArray },
+});
+
+Product.register();

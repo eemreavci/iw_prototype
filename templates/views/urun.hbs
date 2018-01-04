@@ -1,0 +1,261 @@
+{{!< default}}
+<div class="main-content">
+  <div class="breadcrumb-container">
+    <a href="/">Ana Sayfa</a> >> <a href="/urunler">Urunler</a> >> <a class="disabled">{{product.name}}</a>
+  </div>
+  <div class="product-detail-container">
+    <div class="product-detail-top-container">
+      <div class="product-name">
+        <h2>{{product.name}}</h2>
+      </div>
+      <div class="product-detail-info-container">
+        <div class="product-detail-image" style="background-image: url('{{{cloudinaryUrl product.image height=366 quality="auto" crop="fit"}}}')">
+        </div>
+        <div class="product-detail-highlight-container">
+          {{# if product.highlightPropertyHeader1}}
+            <div class="product-detail-highlight">
+              <div class="product-detail-highlight-title">
+                {{product.highlightPropertyHeader1}}:
+              </div>
+              <div class="product-detail-highlight-content">
+                {{product.highlightPropertyText1}}
+              </div>
+            </div>
+          {{/if}}
+          {{# if product.highlightPropertyHeader2}}
+            <div class="product-detail-highlight">
+              <div class="product-detail-highlight-title">
+                {{product.highlightPropertyHeader2}}:
+              </div>
+              <div class="product-detail-highlight-content">
+                {{product.highlightPropertyText2}}
+              </div>
+            </div>
+          {{/if}}
+          {{# if product.highlightPropertyHeader3}}
+            <div class="product-detail-highlight">
+              <div class="product-detail-highlight-title">
+                {{product.highlightPropertyHeader3}}:
+              </div>
+              <div class="product-detail-highlight-content">
+                {{product.highlightPropertyText3}}
+              </div>
+            </div>
+          {{/if}}
+          {{# if product.highlightPropertyHeader4}}
+            <div class="product-detail-highlight">
+              <div class="product-detail-highlight-title">
+                {{product.highlightPropertyHeader4}}:
+              </div>
+              <div class="product-detail-highlight-content">
+                {{product.highlightPropertyText4}}
+              </div>
+            </div>
+          {{/if}}
+          {{# if product.highlightPropertyHeader5}}
+            <div class="product-detail-highlight">
+              <div class="product-detail-highlight-title">
+                {{product.highlightPropertyHeader5}}:
+              </div>
+              <div class="product-detail-highlight-content">
+                {{product.highlightPropertyText5}}
+              </div>
+            </div>
+          {{/if}}
+          <div class="product-detail-highlight-cta-container">
+            <a href="/iletisim" class="cta">
+              TEKLIF AL
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-detail-all-props-container">
+      <div class="product-detail-all-props-title">
+        <h2>Butun Ozellikler</h2>
+      </div>
+      <div class="product-detail-props-container">
+        {{# if product.propertiesHeader1}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader1}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties1}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader2}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader2}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties2}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader3}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader3}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties3}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader4}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader4}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties4}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader5}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader5}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties5}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader6}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader6}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties6}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader7}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader7}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties7}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader8}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader8}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties8}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader9}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader9}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties9}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader10}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader10}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties10}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader11}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader11}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties11}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader12}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader12}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties12}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader13}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader13}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties13}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader14}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader14}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties14}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+        {{# if product.propertiesHeader15}}
+          <div class="product-detail-prop-container">
+            <div class="product-detail-prop-title">
+              {{product.propertiesHeader15}}
+            </div>
+            <ul class="product-detail-prop-list">
+              {{#each product.properties15}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

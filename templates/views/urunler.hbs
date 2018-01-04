@@ -1,0 +1,21 @@
+{{!< default}}
+<div class="main-content">
+  <div class="products-hero">
+    <h1>
+      URUNLER
+    </h1>
+  </div>
+  <div class="products-container">
+    {{# each products}}
+      <a class="product-container" href="urunler/{{slug}}">
+        <div class="product-image-container">
+          <div class="product-image" style="background-image: url('{{{cloudinaryUrl image height=200 quality="auto" crop="fit"}}}')">
+          </div>
+        </div>
+        <div class="product-name">
+          {{name}}
+        </div>
+      </a>
+    {{/each}}
+  </div>
+</div>

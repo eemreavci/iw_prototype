@@ -1,0 +1,119 @@
+{{!< default}}
+<div class="main-content">
+  <div class="hero-container about-page" style="background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,h_736/v1514629896/contact-background_gvydzq.png')">
+    <div class="hero-content">
+      <h1>
+        ILETISIM
+      </h1>
+      <div class="hero-subtext">
+
+      </div>
+    </div>
+  </div>
+	<div class="contact-info-container">
+		<div class="contact-info-text-container">
+			<div class="contact-info-text">
+				<h2>
+					Adres
+				</h2>
+				<div class="contact-info-content">
+					<p>Prof.Ahmet Taner Kışlalı Mah. </p>
+					<p>2866. Sokak (Dragos Villaları) No:25 </p>
+					<p>Çayyolu - Ankara /Türkiye 06810</p>
+				</div>
+			</div>
+			<div class="contact-info-text">
+				<h2>
+					Telefon
+				</h2>
+				<div class="contact-info-content">
+					<p>0312 242 05 67</p>
+				</div>
+			</div>
+			<div class="contact-info-text">
+				<h2>
+					Fax
+				</h2>
+				<div class="contact-info-content">
+					<p>0312 242 13 93</p>
+				</div>
+			</div>
+			<div class="contact-info-text">
+				<h2>
+					E-posta
+				</h2>
+				<div class="contact-info-content">
+					<p>info@ima.com.tr</p>
+				</div>
+			</div>
+			<div class="contact-info-text">
+				<h2>
+					Sosyal Medya
+				</h2>
+				<div class="contact-info-content">
+					<div class="social-media-container">
+						<div class="facebook-icon">
+						</div>
+						<div class="linkedin-icon">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contact-info-map-container">
+			<iframe src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3062.0952194844886!2d32.67903931511736!3d39.87210497943218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d338d108580d0f%3A0xe1031bc34be2fc61!2s%C4%B0ma+Bilgi+Sistemleri!5e0!3m2!1sen!2sde!4v1514631551423
+	      &zoom=17
+	      &key=AIzaSyDYBUgdA02AddIDBUqo3yNKxd9tu96TUzk"
+				width="100%"
+				height="100%"
+				frameborder="0"
+				style="border:0"
+				allowfullscreen
+			>
+	  </iframe>
+		</div>
+	</div>
+	<div class="contact-form-section-container">
+		<div class="contact-form-title">
+			<h2>Iletisim Formu</h2>
+		</div>
+		<div class="contact-form-container">
+			{{#if enquirySubmitted}}
+			<h3>Thanks for getting in touch.</h3>
+			{{else}}
+			<form class="contact-form" method="post">
+				<div class="contact-form-line">
+					<input type="hidden" name="action" value="contact">
+					<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+						<label>Isim</label>
+						<input type="text" name="name.first" placeholder="Isim" class="form-control" value="{{formData.[name.first]}}">
+					</div>
+					<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+						<label>Soyisim</label>
+						<input type="text" name="name.last" placeholder="Soyisim" class="form-control" value="{{formData.[name.last]}}">
+					</div>
+				</div>
+				<div class="contact-form-line">
+					<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+						<label>E-posta adresi</label>
+						<input type="email" name="email" placeholder="E-posta adresi" class="form-control" value="{{formData.email}}">
+					</div>
+					<div class="form-group">
+						<label>Telefon</label>
+						<input type="text" name="phone" placeholder="Telefon" class="form-control" value="{{formData.phone}}">
+					</div>
+				</div>
+				<div class="contact-form-message">
+					<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+						<label>Mesajiniz</label>
+						<textarea name="message" placeholder="Mesajiniz" rows="4" class="form-control">{{formData.message}}</textarea>
+					</div>
+				</div>
+				<div class="form-actions">
+					<button type="submit" class="cta">GONDER</button>
+				</div>
+			</form>
+			{{/if}}
+		</div>
+	</div>
+</div>
