@@ -35,7 +35,7 @@ body {
 
 .main-content {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1440px;
   margin: 0 auto;
   color: $main-color;
   background-color: $white-color;
@@ -76,25 +76,33 @@ body {
   .hero-container {
     width: 100%;
     height: 395px;
-    padding-left: 172px;
     background-size: cover;
     color: #3C688D;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
-    .hero-content {
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-
-    .hero-product-image {
+    .hero-content-container {
+      max-width: 1140px;
+      height: 100%;
       width: 100%;
-      margin-top: 60px;
-      margin-bottom: 60px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .hero-content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .hero-product-image {
+        width: 100%;
+        max-width: 407px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 80px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
     }
 
     .hero-subtext {
@@ -123,6 +131,7 @@ body {
         text-align: center;
         font-size: 24px;
         line-height: 31px;
+        width: 100%;
       }
     }
   }
@@ -130,58 +139,65 @@ body {
   .feature-section {
     height: 363px;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    padding: 30px 90px 45px 104px;
 
-    .feature-image-container {
-      flex: 5;
+    .feature-section-content-container {
+      max-width: 1140px;
+      margin: 0 auto;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      flex-direction: row;
+      padding: 30px 90px 45px 104px;
+      width: 100%;
+      height: 100%;
 
-      .feature-image {
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
+      .feature-image-container {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
 
-        div[data-slideshow-items] {
-          height: 100% !important;
-        }
-
-        * {
+        .feature-image {
+          width: 100%;
           height: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+
+          div[data-slideshow-items] {
+            height: 100% !important;
+          }
+
+          * {
+            height: 100%;
+          }
+
+          h4, img {
+            display: none;
+          }
         }
 
-        h4, img {
-          display: none;
-        }
-      }
-
-      .feature-image-subtext {
-        margin-top: 10px;
-        color: $text-color-light;
-        line-height: 22px;
-      }
-    }
-
-    .feature-text-container {
-      flex: 7;
-      display: flex;
-      flex-direction: column;
-      margin-left: 60px;
-      padding-top: 30px;
-
-      .feature-text-inner-container {
-        max-width: 470px;
-
-        .feature-detail-text {
-          @include regular-text;
+        .feature-image-subtext {
+          margin-top: 10px;
           color: $text-color-light;
+          line-height: 22px;
+        }
+      }
+
+      .feature-text-container {
+        flex: 7;
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+        padding-top: 30px;
+
+        .feature-text-inner-container {
+          max-width: 470px;
+
+          .feature-detail-text {
+            @include regular-text;
+            color: $text-color-light;
+          }
         }
       }
     }
@@ -344,6 +360,9 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 36px 80px 60px;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
 
     h2 {
       margin-bottom: 15px;
@@ -391,6 +410,12 @@ body {
     }
   }
 
+  .about-us-content-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
   .about-us-text {
     padding: 50px 95px 60px 95px;
     @include regular-text;
@@ -432,6 +457,8 @@ body {
 
   .contact-info-container {
     width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
     padding: 80px 48px 60px 95px;
     display: flex;
     flex-direction: row;
@@ -508,6 +535,8 @@ body {
     .contact-form-container {
       padding: 21px 104px 50px 104px;
       width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
       .contact-form {
         display: flex;
         flex-direction: column;
@@ -599,6 +628,9 @@ body {
   }
 
   .references-categories-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
     padding: 50px 60px 80px 80px;
 
     .reference-category-container {
@@ -645,6 +677,8 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
 
     .product-container {
       width: 265px;
@@ -717,8 +751,8 @@ body {
   .product-detail-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     .product-detail-top-container {
       display: flex;
@@ -752,7 +786,8 @@ body {
           margin-left: 62px;
           display: flex;
           flex-direction: column;
-          margin-top: 78px;
+          margin-top: 38px;
+          margin-bottom: 40px;
 
           .product-detail-highlight {
             display: flex;
@@ -781,10 +816,18 @@ body {
     }
     .product-detail-all-props-container {
       width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
       padding: 60px 92px 50px 104px;
       background: $gray-background;
       margin-bottom: 60px;
-      
+
+      .product-detail-all-props-content-container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+
       .product-detail-all-props-title {
 
       }
@@ -921,19 +964,19 @@ nav {
   align-items: center;
   width: 100%;
   background: #ffffff;
-  padding: 20px 30px 27px;
+  padding: 15px 30px 15px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
 
   .logo {
-    width: 100px;
+    width: 140px;
     background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,w_200/v1514537749/new_logo_qqtpgq.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 45px;
+    height: 55px;
   }
 
   .nav-links-container {

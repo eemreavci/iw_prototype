@@ -3,16 +3,18 @@
   <div class="slider-container">
     {{# each sliderItems}}
     <div class="hero-container" style="background-image: url('{{{cloudinaryUrl backgroundImage height=736 quality="auto" crop="fit"}}}')">
-      <div class="hero-content">
-        <h1>
-          {{title}}
-        </h1>
-        <div class="hero-subtext">
-          {{subtext}}
+      <div class="hero-content-container">
+        <div class="hero-content">
+          <h1>
+            {{title}}
+          </h1>
+          <div class="hero-subtext">
+            {{subtext}}
+          </div>
+          <a href="{{buttonLink}}" class="cta">{{buttonText}}</a>
         </div>
-        <a href="{{buttonLink}}" class="cta">{{buttonText}}</a>
-      </div>
-      <div class="hero-product-image slideInUp" style="background-image: url('{{{cloudinaryUrl productImage height=736 quality="auto" crop="fit"}}}')">
+        <div class="hero-product-image slideInUp" style="background-image: url('{{{cloudinaryUrl productImage height=736 quality="auto" crop="fit"}}}')">
+        </div>
       </div>
     </div>
     {{/each}}
@@ -21,28 +23,30 @@
     {{# each features}}
       {{#ifOdd orderInPage }}
       <div class="feature-section light scrollme">
-        <div
-          class="feature-image-container animateme"
-          data-when="enter"
-          data-from={{orderInPage}}
-          data-to="0"
-          data-translatey="80"
-        >
-          {{#if image}}
-          <div class="feature-image" style="background-image: url('{{{cloudinaryUrl image height=510 quality="auto" crop="fit"}}}')">
+        <div class="feature-section-content-container">
+          <div
+            class="feature-image-container animateme"
+            data-when="enter"
+            data-from={{orderInPage}}
+            data-to="0"
+            data-translatey="80"
+          >
+            {{#if image}}
+            <div class="feature-image" style="background-image: url('{{{cloudinaryUrl image height=510 quality="auto" crop="fit"}}}')">
+            </div>
+            {{/if}}
+            <div class="feature-image-subtext">
+              {{{subtext}}}
+            </div>
           </div>
-          {{/if}}
-          <div class="feature-image-subtext">
-            {{{subtext}}}
-          </div>
-        </div>
-        <div class="feature-text-container">
-          <div class="feature-text-inner-container">
-            <h2>
-              {{{title}}}
-            </h2>
-            <div class="feature-detail-text">
-              {{{description}}}
+          <div class="feature-text-container">
+            <div class="feature-text-inner-container">
+              <h2>
+                {{{title}}}
+              </h2>
+              <div class="feature-detail-text">
+                {{{description}}}
+              </div>
             </div>
           </div>
         </div>
@@ -50,29 +54,31 @@
       {{/ifOdd}}
       {{#ifEven orderInPage }}
       <div class="feature-section dark scrollme">
-        <div class="feature-text-container">
-          <div class="feature-text-inner-container">
-            <h2>
-              {{{title}}}
-            </h2>
-            <div class="feature-detail-text">
-              {{{description}}}
+        <div class="feature-section-content-container">
+          <div class="feature-text-container">
+            <div class="feature-text-inner-container">
+              <h2>
+                {{{title}}}
+              </h2>
+              <div class="feature-detail-text">
+                {{{description}}}
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="feature-image-container animateme"
-          data-when="enter"
-          data-from={{orderInPage}}
-          data-to="0"
-          data-translatey="80"
-        >
-          {{#if image}}
-          <div class="feature-image" style="background-image: url('{{{cloudinaryUrl image height=510 quality="auto" crop="fit"}}}')">
-          </div>
-          {{/if}}
-          <div class="feature-image-subtext">
-            {{{subtext}}}
+          <div
+            class="feature-image-container animateme"
+            data-when="enter"
+            data-from={{orderInPage}}
+            data-to="0"
+            data-translatey="80"
+          >
+            {{#if image}}
+            <div class="feature-image" style="background-image: url('{{{cloudinaryUrl image height=510 quality="auto" crop="fit"}}}')">
+            </div>
+            {{/if}}
+            <div class="feature-image-subtext">
+              {{{subtext}}}
+            </div>
           </div>
         </div>
       </div>

@@ -24,6 +24,7 @@
 		<nav>
 	    <a href="/"><div class="logo"></div></a>
 	    <div class="nav-links-container">
+				<a {{#ifeq section 'home'}}class="active"{{/ifeq}} href="/">Ana Sayfa</a>
 	      <a {{#ifeq section 'hakkimizda'}}class="active"{{/ifeq}} href="/hakkimizda">Hakkımızda</a>
 	      <a {{#ifeq section 'urunler'}}class="active"{{/ifeq}} href="/urunler">Ürünler</a>
 	      <a {{#ifeq section 'referanslar'}}class="active"{{/ifeq}} href="/referanslar">Referanslar</a>
@@ -80,6 +81,7 @@
 						</div>
 					</div>
 					<div class="footer-links">
+						<a href="/">Ana Sayfa</a>
 						<a href="/hakkimizda">Hakkımızda</a>
 			      <a href="/urunler">Ürünler</a>
 			      <a href="/referanslar">Referanslar</a>
@@ -133,12 +135,6 @@
 				</div>
 			</div>
 		</div>
-
-		{{#if user}}
-		<li><a href="/keystone/signout">Sign Out</a></li>
-		{{else}}
-		<li><a href="/keystone/signin">Sign In</a></li>
-		{{/if}}
 		{{!--
 			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
 			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
