@@ -6406,7 +6406,8 @@ body {
     .main-content .product-detail-container .product-detail-all-props-container {
       width: 100%;
       padding: 60px 92px 50px 104px;
-      background: #F9F9F9; }
+      background: #F9F9F9;
+      margin-bottom: 60px; }
       .main-content .product-detail-container .product-detail-all-props-container .product-detail-props-container {
         margin-top: 14px;
         display: flex;
