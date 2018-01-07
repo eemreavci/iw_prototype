@@ -15,6 +15,7 @@ SliderItem.add({
 	productImage: { type: Types.CloudinaryImage },
 	backgroundImage: { type: Types.CloudinaryImage },
 	buttonText: { type: String },
+	buttonLink: { type: String },
 	orderInSlider: { type: Number },
 });
 
