@@ -20,8 +20,14 @@
   <div class="features-container">
     {{# each features}}
       {{#ifOdd orderInPage }}
-      <div class="feature-section light">
-        <div class="feature-image-container">
+      <div class="feature-section light scrollme">
+        <div
+          class="feature-image-container animateme"
+          data-when="enter"
+          data-from={{orderInPage}}
+          data-to="0"
+          data-translatey="80"
+        >
           {{#if image}}
           <div class="feature-image" style="background-image: url('{{{cloudinaryUrl image height=510 quality="auto" crop="fit"}}}')">
           </div>
@@ -43,7 +49,7 @@
       </div>
       {{/ifOdd}}
       {{#ifEven orderInPage }}
-      <div class="feature-section dark">
+      <div class="feature-section dark scrollme">
         <div class="feature-text-container">
           <div class="feature-text-inner-container">
             <h2>
@@ -54,7 +60,13 @@
             </div>
           </div>
         </div>
-        <div class="feature-image-container">
+        <div
+          class="feature-image-container animateme"
+          data-when="enter"
+          data-from={{orderInPage}}
+          data-to="0"
+          data-translatey="80"
+        >
           {{#if image}}
           <div class="feature-image" style="background-image: url('{{{cloudinaryUrl image height=510 quality="auto" crop="fit"}}}')">
           </div>
@@ -72,8 +84,36 @@
     <div class="about-product-detail">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
     </div>
-    <div class="about-product-icons-container">
-      <div class="about-product-icon-container">
+    <div class="about-product-icons-container scrollme">
+      <div
+        class="about-product-icon-container animateme"
+        data-when="enter"
+        data-from="0.5"
+        data-to="0.1"
+        data-opacity="0"
+        data-translatex="-150"
+        data-rotatez="60"
+      >
+        <div
+          class="about-product-icon"
+          style="background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,w_100/v1514500806/icon-recharge_ghxwdu.png')"
+        >
+        </div>
+        <h2 class="about-product-icon-header">
+          Simply Rechargeable
+        </h2>
+        <div class="about-product-icon-description">
+          Up to 4 weeks of battery life
+        </div>
+      </div>
+      <div
+        class="about-product-icon-container animateme"
+        data-when="enter"
+        data-from="0.5"
+        data-to="0.1"
+        data-opacity="0"
+        data-translatey="150"
+      >
         <div class="about-product-icon" style="background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,w_100/v1514500806/icon-recharge_ghxwdu.png')">
         </div>
         <h2 class="about-product-icon-header">
@@ -83,17 +123,15 @@
           Up to 4 weeks of battery life
         </div>
       </div>
-      <div class="about-product-icon-container">
-        <div class="about-product-icon" style="background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,w_100/v1514500806/icon-recharge_ghxwdu.png')">
-        </div>
-        <h2 class="about-product-icon-header">
-          Simply Rechargeable
-        </h2>
-        <div class="about-product-icon-description">
-          Up to 4 weeks of battery life
-        </div>
-      </div>
-      <div class="about-product-icon-container">
+      <div
+        class="about-product-icon-container animateme"
+        data-when="enter"
+        data-from="0.5"
+        data-to="0.1"
+        data-opacity="0"
+        data-translatex="150"
+        data-rotatez="-60"
+      >
         <div class="about-product-icon" style="background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,h_100/v1514500806/icon-premium-support_wuubz7.png')">
         </div>
         <h2 class="about-product-icon-header">
@@ -105,14 +143,28 @@
       </div>
     </div>
   </div>
-  <div class="tech-spec-container">
+  <div class="tech-spec-container scrollme">
     <h2>Tech Specifications</h2>
     <div class="tech-spec-image" style="background-image: url('http://res.cloudinary.com/dfjtnd0ht/image/upload/c_scale,h_900,q_100/v1514535087/tech-spec_zqg3cs.png')">
     </div>
-    <div class="tech-spec-large-text">
+    <div
+      class="tech-spec-large-text animateme"
+      data-when="enter"
+      data-from="2.2"
+      data-to="0.2"
+      data-opacity="-1.5"
+      data-translatey="100"
+    >
       50mm / 900grams
     </div>
-    <div class="tech-spec-small-text-container">
+    <div
+      class="tech-spec-small-text-container animateme"
+      data-when="enter"
+      data-from="2.2"
+      data-to="0.2"
+      data-opacity="-1.5"
+      data-translatey="100"
+    >
       <div class="tech-spec-small-text">
         Thickness: 50mm
       </div>
@@ -126,15 +178,45 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
     </div>
     <div class="cta">
-      BIZE ULASIN
+      BİZE ULAŞIN
     </div>
   </div>
-  <div class="references-container">
+  <div class="references-container scrollme">
     <h2>Referanslar</h2>
+    <div
+      class="references-large-text animateme"
+      data-when="enter"
+      data-from="1"
+      data-to="0"
+      data-opacity="0"
+      data-translatey="100"
+    >
+      67 şehirde 300'den fazla iş ortağı
+    </div>
     <div class="references-map">
     </div>
+    <div class="references-slider">
+      <div class="reference-slider-item">
+        <img src="http://res.cloudinary.com/dfjtnd0ht/image/upload/v1515285951/image_7_bb7zk5.png" alt="reference image">
+      </div>
+      <div class="reference-slider-item">
+        <img src="http://res.cloudinary.com/dfjtnd0ht/image/upload/v1515285951/image_10_kaayym.png" alt="reference image">
+      </div>
+      <div class="reference-slider-item">
+        <img src="http://res.cloudinary.com/dfjtnd0ht/image/upload/v1515285951/image_4_as3d9y.png" alt="reference image">
+      </div>
+      <div class="reference-slider-item">
+        <img src="http://res.cloudinary.com/dfjtnd0ht/image/upload/v1515285951/Screen_Shot_2018-01-06_at_4.28_lo23y4.png" alt="reference image">
+      </div>
+      <div class="reference-slider-item">
+        <img src="http://res.cloudinary.com/dfjtnd0ht/image/upload/v1515285951/image_8_rjvr6k.png" alt="reference image">
+      </div>
+      <div class="reference-slider-item">
+        <img src="http://res.cloudinary.com/dfjtnd0ht/image/upload/v1515285951/image_9_zzfk2o.png" alt="reference image">
+      </div>
+    </div>
     <div class="cta">
-      REFERANS DETAYLARI
+      BÜTÜN REFERANSLAR
     </div>
   </div>
 </div>

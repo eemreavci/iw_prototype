@@ -17,14 +17,16 @@ $(document).ready(function () {
 		el.before( el.clone(true) ).remove();
 	})
 
-	$("input, textarea").keyup(function() {
-  // Check input( $(this).val() ) for validity here
-	if ($(this).val().length) {
-		$(this).siblings('label').addClass('active');
-		$(this).addClass('active');
-	} else {
-		$(this).siblings('label').removeClass('active');
-		$(this).removeClass('active');
-	}
-});
+	$('input, textarea').keyup(function() {
+	  // Check input( $(this).val() ) for validity here
+		if ($(this).val().length) {
+			$(this).siblings('label').addClass('active');
+			$(this).addClass('active');
+		} else {
+			$(this).siblings('label').removeClass('active');
+			$(this).removeClass('active');
+		}
+	});
+
+	scrollme.init();
 });

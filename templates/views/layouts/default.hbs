@@ -24,11 +24,11 @@
 		<nav>
 	    <a href="/"><div class="logo"></div></a>
 	    <div class="nav-links-container">
-	      <a {{#ifeq section 'hakkimizda'}}class="active"{{/ifeq}} href="/hakkimizda">Hakkimizda</a>
-	      <a {{#ifeq section 'urunler'}}class="active"{{/ifeq}} href="/urunler">Urunler</a>
+	      <a {{#ifeq section 'hakkimizda'}}class="active"{{/ifeq}} href="/hakkimizda">Hakkımızda</a>
+	      <a {{#ifeq section 'urunler'}}class="active"{{/ifeq}} href="/urunler">Ürünler</a>
 	      <a {{#ifeq section 'referanslar'}}class="active"{{/ifeq}} href="/referanslar">Referanslar</a>
-	      <a {{#ifeq section 'iletisim'}}class="active"{{/ifeq}} href="/iletisim">Iletisim</a>
-	      <button class="ghost-cta">TEKLIF AL</button>
+	      <a {{#ifeq section 'iletisim'}}class="active"{{/ifeq}} href="/iletisim">İletişim</a>
+	      <button class="ghost-cta">TEKLİF AL</button>
 	    </div>
 	  </nav>
 		<div id="body">
@@ -63,50 +63,71 @@
 			<!-- The content block should contain the body of your template's content-->
 			{{{body}}}
 		</div>
-		<div id="footer">
-			<div class="footer-container">
-				<div class="footer-logo">
-
-				</div>
-				<div class="footer-links">
-					<a href="/hakkimizda">Hakkimizda</a>
-		      <a href="#">Urunler</a>
-		      <a href="#">Referanslar</a>
-		      <a href="#">Iletisim</a>
-				</div>
-				<div class="footer-contact">
-					<div class="footer-contact-item">
-						<div class="footer-contact-item-title">
-							Adres:
+		<div
+			id="footer"
+		>
+			<div
+				class="footer-animation-container"
+			>
+				<div
+					class="footer-container"
+				>
+					<div class="footer-logo-container">
+						<div class="footer-logo">
 						</div>
-						<div class="footer-contact-item-text">
-							Prof.Ahmet Taner Kışlalı Mah.<br>
-							2866. Sokak (Dragos Villaları) No:25<br>
-							Çayyolu - Ankara /Türkiye 06810
+						<div class="footer-all-rights">
+							©2018 - İma Bilgi Sistemleri Bütün hakları saklıdır.
 						</div>
 					</div>
-					<div class="footer-contact-item">
-						<div class="footer-contact-item-title">
-							Tel:
-						</div>
-						<div class="footer-contact-item-text">
-							0312 242 05 67
-						</div>
+					<div class="footer-links">
+						<a href="/hakkimizda">Hakkımızda</a>
+			      <a href="/urunler">Ürünler</a>
+			      <a href="/referanslar">Referanslar</a>
+			      <a href="/iletisim">İletişim</a>
+						<a href="/kullanim-kosullari">Kullanım Koşulları</a>
 					</div>
-					<div class="footer-contact-item">
-						<div class="footer-contact-item-title">
-							Fax:
+					<div class="footer-contact">
+						<div class="footer-contact-item">
+							<div class="footer-contact-item-title">
+								Adres:
+							</div>
+							<div class="footer-contact-item-text">
+								Prof.Ahmet Taner Kışlalı Mah.<br>
+								2866. Sokak (Dragos Villaları) No:25<br>
+								Çayyolu - Ankara /Türkiye 06810
+							</div>
 						</div>
-						<div class="footer-contact-item-text">
-							0312 242 13 93
+						<div class="footer-contact-item">
+							<div class="footer-contact-item-title">
+								Tel:
+							</div>
+							<div class="footer-contact-item-text">
+								0312 242 05 67
+							</div>
 						</div>
-					</div>
-					<div class="footer-contact-item">
-						<div class="footer-contact-item-title">
-							Email:
+						<div class="footer-contact-item">
+							<div class="footer-contact-item-title">
+								Fax:
+							</div>
+							<div class="footer-contact-item-text">
+								0312 242 13 93
+							</div>
 						</div>
-						<div class="footer-contact-item-text">
-							info@ima.com.tr
+						<div class="footer-contact-item">
+							<div class="footer-contact-item-title">
+								Email:
+							</div>
+							<div class="footer-contact-item-text">
+								info@ima.com.tr
+							</div>
+						</div>
+						<div class="footer-contact-item">
+							<div class="footer-social-media-container">
+								<div class="facebook-icon">
+								</div>
+								<div class="linkedin-icon">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -130,6 +151,7 @@
 		--}}
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
 		<script type="text/javascript" src="/js/slick/slick.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.scrollme.min.js"></script>
 		<script type="text/javascript" src="/js/index.js"></script>
 		{{{isAdminEditorJS user}}}
 	</body>
